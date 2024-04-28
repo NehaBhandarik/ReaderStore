@@ -1,0 +1,43 @@
+@model List<BooksEntity>
+@{
+    ViewData["Title"] = "Library";
+}
+<h2>Library</h2>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td> Book Title </td>
+                    <td>Author Name</td>
+                    <td>Category</td>
+                    <td>Last Update</td>
+                   
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td><img src="/books/@item.Image" width="100"/>
+                          @item.Title</td>
+                        
+                        <td>@item.Author</td>
+                        <td>@item.Category</td>
+                        <td>@item.published 
+                            </td>
+                    
+                       
+                    </tr>
+                } 
+            </tbody>
+        </table>
+       
+                           
+</div>

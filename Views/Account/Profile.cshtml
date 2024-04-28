@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <h1>@ViewData["Title"]</h1>
+            <div class="col-md-12">
+                <img src="@Model.ProfileImage"
+                alt="" style="height:100px; width:100px" class="img-rounded img-responsive"
+            </div>
+            <div class="col-md-2">
+                <h3>@Model.Name</h3>
+                <br>
+                @Model.UserId
+                <i class="glyphicon glyphicon-envelope"></i> @Model.EmailAddress
+            </div>
+        </div>
+    </div>
+</div>
